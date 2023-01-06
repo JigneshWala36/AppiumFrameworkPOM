@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+
+    <listeners>
+        <!--        RahulBhai                 -->
+        <listener class-name="com.pfa.qa.android.extentReportListeners.Listeners"></listener>
+
+    </listeners>
+    <test verbose="2" preserve-order="true"
+          name="D:/Jignesh/Intellij Project/AppiumFrameworkFinal/AppiumFrameworkFinal/AppiumFrameworkFinal">
+        <classes>
+
+            <class name="com.pfa.qa.android.test.FormTestPage">
+                <methods>
+                    <include name="FillForm_ErrorValidation"/>
+                    <include name="FillForm_PositiveFlow"/>
+                </methods>
+            </class>
+            <class name="com.pfa.qa.android.test.EndToEndTestPage">
+                <methods>
+                    <include name="FormToBuy"/>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+</suite>
