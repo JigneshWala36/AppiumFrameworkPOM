@@ -24,6 +24,7 @@ public class AndroidActions extends AppiumUtils {
         ((JavascriptExecutor) driver).executeScript("mobile: longClickGesture",
                 of("elementId", ((RemoteWebElement) ele).getId()));
 
+
     }
 
     public void scrollToEndAction() {
