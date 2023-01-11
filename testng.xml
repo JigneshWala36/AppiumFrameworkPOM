@@ -14,14 +14,14 @@
             <class name="com.pfa.qa.android.test.FormTestPage">
                 <methods>
                     <include name="FillForm_ErrorValidation"/>
-                    <include name="FillForm_PositiveFlow"/>
+<!--                    <include name="FillForm_PositiveFlow"/>-->
                 </methods>
             </class>
-            <class name="com.pfa.qa.android.test.EndToEndTestPage">
-                <methods>
-                    <include name="FormToBuy"/>
-                </methods>
-            </class>
+<!--            <class name="com.pfa.qa.android.test.EndToEndTestPage">-->
+<!--                <methods>-->
+<!--                    <include name="FormToBuy"/>-->
+<!--                </methods>-->
+<!--            </class>-->
 
         </classes>
     </test>

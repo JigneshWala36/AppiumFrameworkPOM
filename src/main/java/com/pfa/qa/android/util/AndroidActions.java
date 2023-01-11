@@ -1,32 +1,27 @@
 package com.pfa.qa.android.util;
 
 import com.google.common.collect.ImmutableMap;
-import com.pfa.qa.android.base.TestBase;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebElement;
 
 import static com.google.common.collect.ImmutableMap.of;
 
 public class AndroidActions extends AppiumUtils {
-
-
     static AndroidDriver driver;
-
     public AndroidActions(AndroidDriver driver) {
         this.driver = driver;
     }
-
     public void longPressAction(WebElement ele) {
         ((JavascriptExecutor) driver).executeScript("mobile: longClickGesture",
                 of("elementId", ((RemoteWebElement) ele).getId()));
 
-
     }
-
+    public static void hideKeyBard() {
+        driver.hideKeyboard();
+    }
     public void scrollToEndAction() {
         boolean canScrollMore;
         do {
@@ -34,12 +29,9 @@ public class AndroidActions extends AppiumUtils {
                     "left", 100, "top", 100, "width", 200, "height", 200,
                     "direction", "down",
                     "percent", 3.0
-
             ));
         } while (canScrollMore);
     }
-
-
     public void scrollToText(String text) {
 
         driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"" + text + "\"));"));
@@ -54,8 +46,6 @@ public class AndroidActions extends AppiumUtils {
 
     }
 
-
-
     public static void waiting(int timeInMilliSecond) {
         try {
             Thread.sleep(timeInMilliSecond);
@@ -64,7 +54,5 @@ public class AndroidActions extends AppiumUtils {
         }
     }
 
-    public static void hideKeyBard() {
-        driver.hideKeyboard();
-    }
+
 }

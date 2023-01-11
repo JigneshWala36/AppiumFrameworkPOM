@@ -9,16 +9,15 @@ public class ExtentReportsNG extends TestBase {
 
     public static ExtentReports getReporterObject() {
 
-        String path = System.getProperty("user.dir", "\\reports\\index.html");
+        String path = System.getProperty("user.dir")+"./report/"+"GeneralAPPReport.html";
         ExtentSparkReporter reporter = new ExtentSparkReporter(path);
         reporter.config().setReportName("Appium Framework Extent Demo");
-        reporter.config().setDocumentTitle("Test Result");
+        reporter.config().setDocumentTitle("Test Report");
 
         extentReports = new ExtentReports();
         extentReports.attachReporter(reporter);
         extentReports.setSystemInfo("Tester", "Jignesh Wala");
         return extentReports;
-
 
     }
 }

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="commons-codec">
+    <CLASSES>
+      <root url="file://$MAVEN_REPOSITORY$/commons-codec" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$MAVEN_REPOSITORY$/commons-codec" recursive="false" />
+  </library>
+</component>
