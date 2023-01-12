@@ -71,10 +71,63 @@
             <artifactId>commons-codec</artifactId>
             <version>1.15</version>
         </dependency>
-
+        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.24</version>
+            <scope>provided</scope>
+        </dependency>
 
 
     </dependencies>
+
+    <profiles>
+
+        <!--      Open CMD from the project folder -> write ->   mvn test -PRegression-->
+        <profile>
+            <id>Regression</id>
+            <build>
+                <pluginManagement>
+                    <plugins>
+                        <plugin>
+                            <groupId>org.apache.maven.plugins</groupId>
+                            <artifactId>maven-surefire-plugin</artifactId>
+                            <version>3.0.0-M8</version>
+                            <configuration>
+                                <suiteXmlFiles>
+                                    <suiteXmlFile>TestNgSuite/testng.xml</suiteXmlFile>
+                                </suiteXmlFiles>
+                            </configuration>
+                        </plugin>
+                    </plugins>
+                </pluginManagement>
+            </build>
+        </profile>
+
+        <!--      Open CMD from the project folder -> write ->   mvn test -PSmoke-->
+        <profile>
+            <id>Smoke</id>
+            <build>
+                <pluginManagement>
+                    <plugins>
+                        <plugin>
+                            <groupId>org.apache.maven.plugins</groupId>
+                            <artifactId>maven-surefire-plugin</artifactId>
+                            <version>3.0.0-M8</version>
+                            <configuration>
+                                <suiteXmlFiles>
+                                    <suiteXmlFile>TestNgSuite/testng_Smoke.xml</suiteXmlFile>
+                                </suiteXmlFiles>
+                            </configuration>
+                        </plugin>
+                    </plugins>
+                </pluginManagement>
+            </build>
+        </profile>
+
+
+    </profiles>
 
 
 </project>

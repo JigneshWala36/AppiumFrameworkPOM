@@ -29,13 +29,14 @@ public class TestBase {
         }
     }
     @SuppressWarnings("NewApi")
-    @BeforeClass
+    @BeforeClass(alwaysRun = true)
     public static void configureAppium() throws MalformedURLException {
 //        appService = new AppiumServiceBuilder()
 //                .withAppiumJS(new File("C:\\Users\\jignesh\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js"))
 //                .withIPAddress("127.0.0.1").usingPort(4723).build();
 //        appService.start();
-        appService = AppiumUtils.startAppiumServer(prop.getProperty("ipAddress"), Integer.parseInt(prop.getProperty("port")));
+        String ipAddress = System.getProperty("ipAddress") != null ? System.getProperty("ipAddress") : prop.getProperty("ipAddress");
+        appService = AppiumUtils.startAppiumServer(ipAddress, Integer.parseInt(prop.getProperty("port")));
         UiAutomator2Options uiOptions = new UiAutomator2Options();
         uiOptions.setDeviceName(prop.getProperty("emulatorName"));  //emulator
 //        uiOptions.setDeviceName("Android Device");                // real device
@@ -49,7 +50,7 @@ public class TestBase {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         formPage = new FormPage(driver);
     }
-    @AfterClass
+    @AfterClass(alwaysRun = true)
     public void tearDown() {
         driver.quit();
         appService.stop();

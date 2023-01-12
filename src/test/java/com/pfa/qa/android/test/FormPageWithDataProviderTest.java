@@ -13,7 +13,7 @@ import java.util.List;
 
 public class FormPageWithDataProviderTest extends TestBase {
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void preSetup() {
         //screen to home page
         formPage.setActivity();
@@ -32,7 +32,7 @@ public class FormPageWithDataProviderTest extends TestBase {
         return new Object[][] {{data.get(0)},{data.get(1)}};
     }
 
-    @Test(dataProvider = "getDataWithValue")
+    @Test(dataProvider = "getDataWithValue", groups= {"JigneshSmokeTest"})
     public void FillFormWithData(String name, String gender, String country) throws InterruptedException {
 
         AndroidActions.waiting(1000);
@@ -49,7 +49,7 @@ public class FormPageWithDataProviderTest extends TestBase {
 
     }
 
-    @Test(dataProvider = "getDataWithJsonFile")
+    @Test(dataProvider = "getDataWithJsonFile", groups= {"JigneshSmokeTest"})
     public void FillFormWithJSONData(HashMap<String,String> input) throws InterruptedException {
 
         AndroidActions.waiting(1000);

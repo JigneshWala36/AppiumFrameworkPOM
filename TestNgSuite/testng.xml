@@ -11,17 +11,17 @@
           name="D:/Jignesh/Intellij Project/AppiumFrameworkFinal/AppiumFrameworkFinal/AppiumFrameworkFinal">
         <classes>
 
-            <class name="com.pfa.qa.android.test.FormTestPage">
+            <class name="com.pfa.qa.android.test.FormTestPageTest">
                 <methods>
                     <include name="FillForm_ErrorValidation"/>
 <!--                    <include name="FillForm_PositiveFlow"/>-->
                 </methods>
             </class>
-<!--            <class name="com.pfa.qa.android.test.EndToEndTestPage">-->
-<!--                <methods>-->
+            <class name="com.pfa.qa.android.test.EndToEndTestPageTest">
+                <methods>
 <!--                    <include name="FormToBuy"/>-->
-<!--                </methods>-->
-<!--            </class>-->
+                </methods>
+            </class>
 
         </classes>
     </test>

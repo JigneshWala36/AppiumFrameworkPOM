@@ -2,19 +2,15 @@ package com.pfa.qa.android.test;
 
 import com.pfa.qa.android.base.TestBase;
 import com.pfa.qa.android.util.AndroidActions;
-
-import io.appium.java_client.android.Activity;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class FormTestPage extends TestBase {
-
+public class FormTestPageTest extends TestBase {
     @BeforeMethod
     public void preSetup() {
         //screen to home page
         formPage.setActivity();
     }
-
     @Test
     public void FillForm_ErrorValidation() throws InterruptedException {
 
@@ -29,7 +25,6 @@ public class FormTestPage extends TestBase {
         AndroidActions.waiting(500);
 
     }
-
     @Test
     public void FillForm_PositiveFlow() throws InterruptedException {
 
@@ -45,6 +40,4 @@ public class FormTestPage extends TestBase {
         AndroidActions.waiting(500);
 
     }
-
-
 }

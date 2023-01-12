@@ -7,7 +7,7 @@ import com.pfa.qa.android.util.AndroidActions;
 import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
 
-public class EndToEndTestPage extends TestBase {
+public class EndToEndTestPageTest extends TestBase {
 
 
     @Test
