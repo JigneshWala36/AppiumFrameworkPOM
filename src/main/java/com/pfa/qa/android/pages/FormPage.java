@@ -46,6 +46,7 @@ public class FormPage extends AndroidActions {
     }
 
     public void setNameField(String name) throws InterruptedException {
+        AndroidActions.waiting(500);
         nameField.sendKeys(name);
         AndroidActions.waiting(500);
         AndroidActions.hideKeyBard();
@@ -78,7 +79,6 @@ public class FormPage extends AndroidActions {
     //    public ProductCatalog submitFrom() throws InterruptedException {
     public void submitFrom() throws InterruptedException {
 
-
         AndroidActions.waiting(500);
         formLetShopBtn.click();
         AndroidActions.waiting(500);
@@ -89,8 +89,8 @@ public class FormPage extends AndroidActions {
         AndroidActions.waiting(500);
         String nameErrorMessage = formNameToastErrorMessage.getAttribute("name");
         AndroidActions.waiting(500);
-//        AssertJUnit.assertEquals(nameErrorMessage,"Please enter your name");
-        AssertJUnit.assertEquals(nameErrorMessage, "Please  your name"); // To check the TestNG Report Failing forcefully
+        AssertJUnit.assertEquals(nameErrorMessage,"Please enter your name");
+//        AssertJUnit.assertEquals(nameErrorMessage, "Please  your name"); // To check the TestNG Report Failing forcefully
         AndroidActions.waiting(500);
 
 

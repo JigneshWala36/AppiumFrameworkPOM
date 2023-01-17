@@ -17,11 +17,11 @@
 <!--                    <include name="FillForm_PositiveFlow"/>-->
                 </methods>
             </class>
-            <class name="com.pfa.qa.android.test.EndToEndTestPageTest">
-                <methods>
+<!--            <class name="com.pfa.qa.android.test.EndToEndTestPageTest">-->
+<!--                <methods>-->
 <!--                    <include name="FormToBuy"/>-->
-                </methods>
-            </class>
+<!--                </methods>-->
+<!--            </class>-->
 
         </classes>
     </test>

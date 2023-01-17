@@ -52,6 +52,8 @@ public class AppiumUtils extends TestBase {
         return price;
     }
 
+
+
     public static List<HashMap<String, String>> getJsonData(String jsonFilePath) throws IOException {
 //       System.getProperty("user.dir") + "\\src\\main\\java\\com\\pfa\\qa\\android\\testData\\eCommerce.json");
 
