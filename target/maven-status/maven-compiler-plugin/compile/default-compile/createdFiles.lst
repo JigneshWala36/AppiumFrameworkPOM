@@ -1,0 +1,10 @@
+com\pfa\qa\android\extentReportListeners\ExtentReportsNG.class
+com\pfa\qa\android\pages\FormPage.class
+com\pfa\qa\android\extentReportListeners\Listeners.class
+com\pfa\qa\android\util\AppiumUtils.class
+com\pfa\qa\android\util\IOSActions.class
+com\pfa\qa\android\pages\ProductCatalogPage.class
+com\pfa\qa\android\util\AppiumUtils$1.class
+com\pfa\qa\android\pages\GoToCartPage.class
+com\pfa\qa\android\util\AndroidActions.class
+com\pfa\qa\android\base\TestBase.class
